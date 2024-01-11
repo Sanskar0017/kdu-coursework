@@ -88,11 +88,10 @@ public class TicketReservation {
                 iterator.remove();
                 return true;
             }
-        }else if(iterator instanceof ArrayDeque){
-            if(iterator.next().getConfirmationNumber().equals(confirmationNumber)) {
-                waitingList.poll();
-                return true;
-            }
+        }else if (iterator instanceof ArrayDeque && iterator.next().getConfirmationNumber().equals(confirmationNumber)) { {
+            waitingList.poll();
+            return true;
+        }
         }
         return false;
     }

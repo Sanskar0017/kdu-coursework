@@ -65,15 +65,16 @@ public class Book implements Comparable {
                 return false;
         } else if (!author.equals(other.author))
             return false;
-        if (title == null) {
-            if (other.title != null)
-                return false;
-        } else if (!title.equals(other.title))
-            return false;
-        if (year != other.year)
-            return false;
-        return true;
+        return title == null ? other.title == null : title.equals(other.title) && year == other.year;
     }
+
+	/*public int hashCode() {
+		return title.hashCode();
+	}
+
+	public boolean equals(Object o) {
+		return (year == (((Book)o).getYear())) && (author.equals((((Book)o).getAuthor())));
+	}*/
 
     public int compareTo(Object book) {
         return getTitle().compareTo(((Book)book).getTitle()); // utilizing String’s compareTo

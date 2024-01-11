@@ -25,19 +25,25 @@ public class ArrayGenerics {
         arr[index2] = temp;
     }
 
-    public static void main(String args[]){
-            Double[] elements = {2.3, 4.5, 1.6, 7.9};
-            exchangeElementsPositions(elements, 1, 3);
-            exchangeElementsPositions(elements, 1, 9);
+    public static void main(String[] args){
+        Double[] elements = {2.3, 4.5, 1.6, 7.9};
+        exchangeElementsPositions(elements, 1, 3);
+        exchangeElementsPositions(elements, 1, 9);
 
-            for(double val : elements) LOGGER.info(String.valueOf(val));
+        for(double val : elements) {
+            LOGGER.info(String.valueOf(val));
+        }
 
-            Integer[] arr = new Integer[]{1, 6, 8, 10, 6};
-            exchangeElementsPositions(arr, 1, 3);
-            for(Integer val : arr) LOGGER.info(String.valueOf(val));
+        Integer[] arr = new Integer[]{1, 6, 8, 10, 6};
+        exchangeElementsPositions(arr, 1, 3);
+        for(Integer val : arr) {
+            LOGGER.info(String.valueOf(val));
+        }
 
-            String[] words = new String[]{"Sanskar", "John", "Sherlock", "Axe", "Harvey"};
-            exchangeElementsPositions(words, 0, 4);
-            for(String val : words) LOGGER.info(String.valueOf(val));
+        String[] words = new String[]{"Sanskar", "John", "Sherlock", "Axe", "Harvey"};
+        exchangeElementsPositions(words, 0, 4);
+        for(String val : words) {
+            LOGGER.info(String.valueOf(val));
+        }
     }
 }

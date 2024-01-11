@@ -9,7 +9,7 @@ public class StudentUtil {
     public static double[] calculateGPA(int[] studentIdList, char[][] studentsGrades) throws MissingGradeException {
 
         if (studentIdList != null && studentsGrades != null && studentIdList.length == studentsGrades.length) {
-            double[] var = new double[studentIdList.length];
+            double[] stuList = new double[studentIdList.length];
 
             for(int i = 0; i < studentIdList.length; ++i) {
                 int scored = 0;
@@ -28,26 +28,27 @@ public class StudentUtil {
                             break;
                         case 'C':
                             scored += 2;
+                            break;
                         case ' ':
                             // exception task 2
-                            System.out.println("debug");
                             throw new MissingGradeException(studentIdList[var8]);
+                        default: break;
 
                     }
                 }
 
-                var[i] = (double)scored / (double)totalcourses;
+                stuList[i] = (double)scored / (double)totalcourses;
             }
 
-            return var;
+            return stuList;
         } else {
-            return null;
+            return new double[0];
         }
     }
 
     public static int[] getStudentsbyGPA(double lower, double higher, int[] studentIdList, char[][] studentGrades) throws InvalidDataException {
 
-            // Task 2 checked exception avoiding compilation errors by catching it
+        // Task 2 checked exception avoiding compilation errors by catching it
         try {
 
             //        Task 1
@@ -56,11 +57,11 @@ public class StudentUtil {
                         + studentIdList.length + ", studentsGrades.length: " + studentGrades.length);
             }
 
-            if (!(lower > higher) && !(lower < 0.0) && !(higher < 0.0) && studentGrades.length == studentIdList.length) {
-                double[] gpa_avg = calculateGPA(studentIdList, studentGrades);
+            if (!(lower <= higher) && !(lower >= 0.0) && !(higher >= 0.0) && studentGrades.length == studentIdList.length) {
+                double[] gpaavg = calculateGPA(studentIdList, studentGrades);
                 int cnt = 0;
-                double[] var8 = gpa_avg;
-                int idx = gpa_avg.length;
+                double[] var8 = gpaavg;
+                int idx = gpaavg.length;
 
                 int i;
                 for (i = 0; i < idx; ++i) {
@@ -73,8 +74,8 @@ public class StudentUtil {
                 int[] list = new int[cnt];
                 idx = 0;
 
-                for (i = 0; i < gpa_avg.length; ++i) {
-                    if (gpa_avg[i] >= lower && gpa_avg[i] <= higher) {
+                for (i = 0; i < gpaavg.length; ++i) {
+                    if (gpaavg[i] >= lower && gpaavg[i] <= higher) {
                         list[idx++] = studentIdList[i];
                     }
                 }
@@ -91,7 +92,7 @@ public class StudentUtil {
         }
     }
 
-    public static void main(String[] args) throws MissingGradeException, InvalidDataException {
+    public static void main(String[] args) throws MissingGradeException {
         Scanner scanner = new Scanner(System.in);
         LOGGER.info("Enter the number of students (n): ");
         int n = scanner.nextInt();
@@ -106,16 +107,17 @@ public class StudentUtil {
         LOGGER.info("Enter students' grades:");
 
         for(int i = 0; i < n; ++i) {
-            LOGGER.info("Student " + studentIdList[i] + ": ");
+            LOGGER.info(String.format("Student %d: ", studentIdList[i]));
             // using another nextLine to avoid issues when reading along with spaces
             LOGGER.info("Enter total subject of grading");
             int m = scanner.nextInt();
             studentsGrades[i] = new char[m];
-            for(int j = 0; j < m; j++) {
+            for(int j = 0; j < m; j++){
                 studentsGrades[i][j] = scanner.next().charAt(0);
             }
+
         }
 
-        double[] gpas = calculateGPA(studentIdList, studentsGrades);
-   }
+        calculateGPA(studentIdList, studentsGrades);
+    }
 }

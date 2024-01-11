@@ -1,24 +1,12 @@
 package org.backend1.que4;
 
+//import java.awt.print.Book;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class SetDemo {
 
-    private static void hashSetDemo() {
-        Set<String> set1 = new HashSet<>();
-        set1.add("a");
-        set1.add("b");
-        set1.add("a");
-
-        System.out.println("set1: " +  set1);
-
-        Book book1 = new Book("Walden", "Henry Thoreau", 1854);
-        Book book2 = new Book("Walden", "Henry Thoreau", 1854);
-        Set<Book> set2 = new HashSet<>();
-        set2.add(book1);
-        set2.add(book2);
-        System.out.println("set2: " +  set2);
-    }
+    private static final Logger LOGGER = Logger.getLogger(SetDemo.class.getName());
 
     public static Set<Book> treeSetDemo(Comparator comparator) {
         Book book1 = new Book("Harry Potter", "J.K.Rowling", 1997);
@@ -29,10 +17,10 @@ public class SetDemo {
 
         Set<Book> books;
 
-        if(comparator != null){
-            books = new TreeSet<Book>(comparator);
+        if (comparator != null) {
+            books = new TreeSet<>(comparator);
         }else{
-            books = new TreeSet<Book>();
+            books = new TreeSet<>();
         }
 
         books.add(book1);
@@ -43,13 +31,14 @@ public class SetDemo {
 
 
         for (Book book : books) {
-            System.out.println(book);
+            LOGGER.info(book.toString());
         }
 
         return books;
     }
 
     public static void main(String[] args) {
+        //hashSetDemo();
         treeSetDemo(null);
     }
 

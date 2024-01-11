@@ -12,7 +12,7 @@ public class InvalidDataException extends Exception{
      * Chaining Awareness construtor
      */
     public InvalidDataException(String message, int cause){
-        LOGGER.info("Student with Id" + cause + " has " + message);
+        LOGGER.info(String.format("Student with Id %d has %s", cause, message));
     }
 
 
