@@ -2,11 +2,10 @@ package org.backend1.que2;
 
 import org.backend1.que3.Main;
 
-import java.util.concurrent.*;
 import java.util.logging.Logger;
 
 public class MessageReceiver implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MessageReceiver.class.getName());
 
     private MessageQueue messageQueue;
 

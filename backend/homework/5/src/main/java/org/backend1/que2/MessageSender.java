@@ -2,12 +2,11 @@ package org.backend1.que2;
 
 import org.backend1.que3.Main;
 
-import java.util.concurrent.*;
 import java.util.logging.Logger;
 
 public class MessageSender implements Runnable {
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MessageSender.class.getName());
 
 
     private MessageQueue messageQueue;
@@ -23,7 +22,7 @@ public class MessageSender implements Runnable {
 
     public void sendMessage() {
         String msg = "Message from " + Thread.currentThread().getName();
-        LOGGER.info(Thread.currentThread().getName() + " sending message: " + msg);
+        LOGGER.info("{} received message: {}", Thread.currentThread().getName(), msg);
         messageQueue.addMessage(msg);
     }
 }

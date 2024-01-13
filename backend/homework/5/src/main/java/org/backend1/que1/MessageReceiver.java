@@ -5,7 +5,7 @@ import org.backend1.que3.Main;
 import java.util.logging.Logger;
 
 class MessageReceiver implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MessageReceiver.class.getName());
 
     private MessageQueue messageQueue;
 
@@ -17,7 +17,6 @@ class MessageReceiver implements Runnable {
         String msg = messageQueue.getMessage();
         LOGGER.info(Thread.currentThread().getName() + " received message: " + msg);
     }
-
     @Override
     public void run() {
         while (true) {

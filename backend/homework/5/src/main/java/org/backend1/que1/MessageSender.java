@@ -2,12 +2,10 @@ package org.backend1.que1;
 
 import org.backend1.que3.Main;
 
-import java.util.Queue;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.logging.Logger;
 
 public class MessageSender implements Runnable {
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(MessageSender.class.getName());
 
     private MessageQueue messageQueue;
 
@@ -17,7 +15,7 @@ public class MessageSender implements Runnable {
 
     public void sendMessage() {
         String msg = "Message from " + Thread.currentThread().getName();
-        LOGGER.info(Thread.currentThread().getName() + " sending message: " + msg);
+        LOGGER.info(Thread.currentThread().getName() + " received message: " + msg);
         messageQueue.addMessage(msg);
     }
 
