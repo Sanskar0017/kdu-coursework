@@ -3,10 +3,10 @@ import java.util.logging.Logger;
 
 public class Factorial extends Thread{
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Factorial.class.getName());
 
 
-    private long factorial;
+    private long factorl;
     private int num;
 
     Factorial(int num){
@@ -14,20 +14,21 @@ public class Factorial extends Thread{
     }
 
     public long getfactorial(){
-        return factorial;
+        return factorl;
     }
 
+    @Override
     public void run(){
         factorial = calculatefac(num);
-        LOGGER.info(String.valueOf(factorial));
+        LOGGER.info("factors are: {}", factorl);
     }
 
-    public long calculatefac(int num)
+    public long calculatefac()
     {
         long res = 1;
         int i = 1;
         while(i <= this.num){
-            factorial *= i;
+            res *= i;
             i++;
         }
 

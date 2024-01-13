@@ -3,19 +3,20 @@ import java.util.logging.Logger;
 
 public class Factors extends Thread{
 
-    private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(Factors.class.getName());
 
 
-    private String factors;
+    private String factrs;
     private int number;
 
     public Factors(int number){
         this.number = number;
     }
 
+    @Override
     public void run(){
         factors = calculateFactors(number);
-        LOGGER.info("factors are: " + factors);
+        LOGGER.info("factors are: {}", factors);
     }
 
     public String calculateFactors(int n){
