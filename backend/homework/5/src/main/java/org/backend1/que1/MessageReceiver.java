@@ -15,8 +15,8 @@ class MessageReceiver implements Runnable {
 
     public void receiveMessage() {
         String msg = messageQueue.getMessage();
-        LOGGER.info("{} received message: {}", Thread.currentThread().getName(), msg);    }
-
+        LOGGER.info(Thread.currentThread().getName() + " received message: " + msg);
+    }
     @Override
     public void run() {
         while (true) {

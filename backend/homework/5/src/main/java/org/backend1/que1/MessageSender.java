@@ -15,7 +15,8 @@ public class MessageSender implements Runnable {
 
     public void sendMessage() {
         String msg = "Message from " + Thread.currentThread().getName();
-        LOGGER.info("{} received message: {}", Thread.currentThread().getName(), msg);        messageQueue.addMessage(msg);
+        LOGGER.info(Thread.currentThread().getName() + " received message: " + msg);
+        messageQueue.addMessage(msg);
     }
 
     @Override

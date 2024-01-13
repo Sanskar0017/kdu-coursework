@@ -19,8 +19,8 @@ public class Factorial extends Thread{
 
     @Override
     public void run(){
-        factorial = calculatefac(num);
-        LOGGER.info("factors are: {}", factorl);
+        factorl = calculatefac();
+        LOGGER.info("factors are: " +  factorl);
     }
 
     public long calculatefac()
