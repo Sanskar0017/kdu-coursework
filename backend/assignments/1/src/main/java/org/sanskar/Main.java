@@ -29,7 +29,7 @@ public class Main {
 
         String coinPath = "src/main/resources/coins.csv";
         String traderPath = "src/main/resources/traders.csv";
-        String jsonPath = "src/main/resources/large_transaction.json";
+        String jsonPath = "src/main/resources/test_transaction.json";
 
         // Loading csv files
         coins = readCoins(coinPath);
