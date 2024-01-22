@@ -4,21 +4,20 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
-import sanskar.logging.Logging;
 import sanskar.model.Speaker;
 import sanskar.model.Tyre;
 import sanskar.model.Vehicle;
 
 import java.util.List;
 
-import static sanskar.logging.Logging.LoggerType.INFO;
 
 @Service
 public class VehicleService {
     @Autowired
-    private  final List<Tyre> tyres=new ArrayList<Tyre>();
+    private  final List<Tyre> tyres=new ArrayList<>();
     @Autowired
     private  final List<Speaker> speakers=new ArrayList<>();
+
     @PostConstruct
     public List<Vehicle> generateVehicle(){
 
