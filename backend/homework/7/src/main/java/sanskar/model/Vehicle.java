@@ -8,7 +8,7 @@ public class Vehicle {
     private Speaker speaker;
     private final double price;
 
-    public Vehicle(Tyre tyre, Speaker speaker, double v) {
+    public Vehicle(Tyre tyre, Speaker speaker) {
         this.tyre = tyre;
         this.speaker = speaker;
         this.price=generatePrice();
