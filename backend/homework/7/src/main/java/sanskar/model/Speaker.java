@@ -9,12 +9,12 @@ public class Speaker {
         this.price = price;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     @Override

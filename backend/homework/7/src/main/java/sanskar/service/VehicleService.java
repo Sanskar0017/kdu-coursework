@@ -7,7 +7,7 @@ import sanskar.model.Vehicle;
 @Component
 abstract class VehicleService {
     Logging logger=new Logging();
-    public abstract void generatevehicles();
+    public abstract void generateVehicles();
     public abstract Vehicle mostExpensive();
     public abstract Vehicle leastExpensive();
 }

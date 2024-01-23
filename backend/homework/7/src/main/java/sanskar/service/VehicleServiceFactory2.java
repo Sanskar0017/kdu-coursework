@@ -32,7 +32,7 @@ public class VehicleServiceFactory2 extends VehicleService {
     }
 
     @Override
-    public void generatevehicles() {
+    public void generateVehicles() {
         for (int i = 0; i < 100; i++) {
             boolean flag = i % 2 == 0;
             inventoryStore.getVehicles().add(createRandomVehicle(flag));

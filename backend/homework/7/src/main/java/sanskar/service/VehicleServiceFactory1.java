@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sanskar.inventory.InventoryStore;
 import sanskar.model.Vehicle;
-import sanskar.service.TyreService;
 
 import java.util.Comparator;
 
@@ -25,7 +24,7 @@ public class VehicleServiceFactory1 extends VehicleService {
     }
 
     @Override
-    public void generatevehicles() {
+    public void generateVehicles() {
         boolean flag = true;
         for (int i = 0; i < 20; i++) {
             if (i % 2 == 0) {

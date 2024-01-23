@@ -8,18 +8,15 @@ public class Vehicle {
     private Speaker speaker;
     private final double price;
 
-    public Vehicle(Tyre tyre, Speaker speaker, double factorId) {
+    public Vehicle(Tyre tyre, Speaker speaker, double v) {
         this.tyre = tyre;
         this.speaker = speaker;
         this.price=generatePrice();
     }
 
-    public void setTyre(Tyre tyre) {
-        this.tyre = tyre;
-    }
-
-    public void setSpeaker(Speaker speaker) {
-        this.speaker = speaker;
+    public double generatePrice()
+    {
+        return tyre.getPrice()+speaker.getPrice();
     }
 
     public Tyre getTyre() {
@@ -32,11 +29,6 @@ public class Vehicle {
 
     public double getPrice() {
         return price;
-    }
-
-    public double generatePrice()
-    {
-        return tyre.getPrice()+speaker.getPrice();
     }
 
     @Override
