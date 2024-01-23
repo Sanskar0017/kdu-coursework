@@ -1,0 +1,50 @@
+package sanskar.model;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Vehicle {
+    private Tyre tyre;
+    private Speaker speaker;
+    private final double price;
+
+    public Vehicle(Tyre tyre, Speaker speaker, double factorId) {
+        this.tyre = tyre;
+        this.speaker = speaker;
+        this.price=generatePrice();
+    }
+
+    public void setTyre(Tyre tyre) {
+        this.tyre = tyre;
+    }
+
+    public void setSpeaker(Speaker speaker) {
+        this.speaker = speaker;
+    }
+
+    public Tyre getTyre() {
+        return tyre;
+    }
+
+    public Speaker getSpeaker() {
+        return speaker;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public double generatePrice()
+    {
+        return tyre.getPrice()+speaker.getPrice();
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "\ntyre=" + tyre +
+                ", \nspeaker=" + speaker +
+                ", \nprice=" + price +
+                '}';
+    }
+}
