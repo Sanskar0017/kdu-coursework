@@ -24,9 +24,9 @@ public class VehicleController {
     private VehicleService vehicleService;
 
     @PostMapping
-    public ResponseEntity<String> createUser(@RequestBody Vehicledto Vehicle){
+    public ResponseEntity<String> createUser(@RequestBody Vehicledto vehicle){
         try{
-            vehicleService.createVehicle(Vehicle);
+            vehicleService.createVehicle(vehicle);
             log.info("Success User creation");
             return new ResponseEntity<>("created user successfully", HttpStatus.CREATED);
         }catch(MyCustomException e){
@@ -37,9 +37,9 @@ public class VehicleController {
 
 
     @GetMapping("{id}")
-    public ResponseEntity<Vehicle> getVehicleById(@PathVariable("id") int VehicleId){
+    public ResponseEntity<Vehicle> getVehicleById(@PathVariable("id") int vehicleId){
         try{
-            Vehicle vehicle = vehicleService.getVehicleById(VehicleId);
+            Vehicle vehicle = vehicleService.getVehicleById(vehicleId);
             return new ResponseEntity<>(vehicle, HttpStatus.OK);
         }catch(IndexOutOfBoundsException e){
             throw new MyCustomException("Index provided is out of bounds");
@@ -59,8 +59,8 @@ public class VehicleController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> deleteVehicle(@PathVariable("id") int VehicleId){
-        vehicleService.deleteVehicle(VehicleId);
+    public ResponseEntity<String> deleteVehicle(@PathVariable("id") int vehicleId){
+        vehicleService.deleteVehicle(vehicleId);
         return new ResponseEntity<>("Deleted successfully", HttpStatus.OK);
     }
 }
