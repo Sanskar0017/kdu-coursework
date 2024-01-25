@@ -6,6 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * GlobalExceptionHandler is handling custom exceptions and general exceptions, inherited from Exception
+ * @author Sanskar
+ */
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -16,7 +20,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(value = {Exception.class})
-    public ResponseEntity<ErrorDTO> AllKindOfExceptions(Exception ex){
+    public ResponseEntity<ErrorDTO> allKindOfExceptions(Exception ex){
         ErrorDTO error = new ErrorDTO(ex.getMessage() + " [Parent Exception]", HttpStatus.INTERNAL_SERVER_ERROR);
         return new ResponseEntity<>(error, HttpStatus.INTERNAL_SERVER_ERROR);
     }
