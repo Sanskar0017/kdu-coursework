@@ -23,9 +23,9 @@ public class VehicleRepo {
         return vehicl.get(id);
     }
 
-    public void updateVehicle(int id, Vehicle Vehicles){
-        vehicl.get(id).setName(Vehicles.getName());
-        vehicl.get(id).setPrice(Vehicles.getPrice());
+    public void updateVehicle(int id, Vehicle vehicles){
+        vehicl.get(id).setName(vehicles.getName());
+        vehicl.get(id).setPrice(vehicles.getPrice());
     }
 
     public void delete(int id){

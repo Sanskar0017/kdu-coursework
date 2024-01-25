@@ -15,10 +15,10 @@ import java.util.List;
 @Service
 class VehicleServiceImplementation implements VehicleService{
     private final VehicleRepo inventoryStore = new VehicleRepo();
-    public Vehicledto createVehicle(Vehicledto VehicleDto){
-        Vehicle Vehicle= VehicleMapper.mapToVehicle(VehicleDto);
-        inventoryStore.save(Vehicle);
-        return VehicleDto;
+    public Vehicledto createVehicle(Vehicledto vehicleDto){
+        Vehicle vehicle= VehicleMapper.mapToVehicle(vehicleDto);
+        inventoryStore.save(vehicle);
+        return vehicleDto;
     }
 
 
@@ -29,9 +29,9 @@ class VehicleServiceImplementation implements VehicleService{
     public List<Vehicle> getAllVehicles(){
         return inventoryStore.getVehicles();
     }
-    public void updateVehicle(int id, Vehicledto VehicleDto){
-        Vehicle Vehicle= VehicleMapper.mapToVehicle(VehicleDto);
-        inventoryStore.updateVehicle(id, Vehicle);
+    public void updateVehicle(int id, Vehicledto vehicleDto){
+        Vehicle vehicle= VehicleMapper.mapToVehicle(vehicleDto);
+        inventoryStore.updateVehicle(id, vehicle);
     }
     public void deleteVehicle(int id){
         inventoryStore.delete(id);

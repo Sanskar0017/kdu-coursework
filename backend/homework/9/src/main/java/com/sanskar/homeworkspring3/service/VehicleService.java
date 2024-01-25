@@ -11,10 +11,10 @@ import java.util.List;
  */
 @Service
 public interface VehicleService {
-    Vehicledto createVehicle(Vehicledto Vehicle);
+    Vehicledto createVehicle(Vehicledto vehicle);
     Vehicle getVehicleById(int id);
     List<Vehicle> getAllVehicles();
-    void updateVehicle(int id, Vehicledto Vehicle);
+    void updateVehicle(int id, Vehicledto vehicle);
     void deleteVehicle(int id);
     Vehicle mostExpensive();
     Vehicle leastExpensive();

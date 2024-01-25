@@ -1,11 +1,10 @@
-package com.sanskar.homeworkspring3.VehicleController;
+package com.sanskar.homeworkspring3.vehicleController;
 
 import com.sanskar.homeworkspring3.exception.MyCustomException;
 import com.sanskar.homeworkspring3.model.Vehicle;
 import com.sanskar.homeworkspring3.service.VehicleService;
 import com.sanskar.homeworkspring3.vehicledto.ErrorDTO;
 import com.sanskar.homeworkspring3.vehicledto.Vehicledto;
-import com.sanskar.homeworkspring3.vehicledto.ErrorDTO;
 import lombok.AllArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,12 +21,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 public class VehicleController {
-    private VehicleService VehicleService;
+    private VehicleService vehicleService;
 
     @PostMapping
     public ResponseEntity<String> createUser(@RequestBody Vehicledto Vehicle){
         try{
-            VehicleService.createVehicle(Vehicle);
+            vehicleService.createVehicle(Vehicle);
             log.info("Success User creation");
             return new ResponseEntity<>("created user successfully", HttpStatus.CREATED);
         }catch(MyCustomException e){
@@ -40,8 +39,8 @@ public class VehicleController {
     @GetMapping("{id}")
     public ResponseEntity<Vehicle> getVehicleById(@PathVariable("id") int VehicleId){
         try{
-            Vehicle Vehicle = VehicleService.getVehicleById(VehicleId);
-            return new ResponseEntity<>(Vehicle, HttpStatus.OK);
+            Vehicle vehicle = vehicleService.getVehicleById(VehicleId);
+            return new ResponseEntity<>(vehicle, HttpStatus.OK);
         }catch(IndexOutOfBoundsException e){
             throw new MyCustomException("Index provided is out of bounds");
         }
@@ -50,7 +49,7 @@ public class VehicleController {
     @PutMapping("{id}")
     public ResponseEntity<String> updateVehicle(@PathVariable int id,@RequestBody Vehicledto updatedVehicle) throws MyCustomException  {
         try {
-            VehicleService.updateVehicle(id, updatedVehicle);
+            vehicleService.updateVehicle(id, updatedVehicle);
             return new ResponseEntity<>("Vehicle updated successfully", HttpStatus.CREATED);
         }catch (IndexOutOfBoundsException e) {
             ErrorDTO errorDTO = new ErrorDTO(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
@@ -61,7 +60,7 @@ public class VehicleController {
 
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteVehicle(@PathVariable("id") int VehicleId){
-        VehicleService.deleteVehicle(VehicleId);
+        vehicleService.deleteVehicle(VehicleId);
         return new ResponseEntity<>("Deleted successfully", HttpStatus.OK);
     }
 }
