@@ -7,8 +7,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -23,10 +22,9 @@ import java.nio.charset.StandardCharsets;
 /**
  * A filter for validating JWT tokens extracted from incoming HTTP requests.
  */
-public class TokenValidatorFilter extends OncePerRequestFilter {
 
-    /** The logger for this class. */
-    public final Logger logger = LoggerFactory.getLogger(TokenValidatorFilter.class);
+@Slf4j
+public class TokenValidatorFilter extends OncePerRequestFilter {
 
     /** The secret key for JWT verification. */
     public static final String JWT_KEY = "jxgEQeXHuPq8VdbyYFNkANdudQ53YUn4";
@@ -55,7 +53,7 @@ public class TokenValidatorFilter extends OncePerRequestFilter {
                         .build()
                         .parseSignedClaims(jwt)
                         .getPayload();
-                logger.info("Reached the token validation point");
+                log.info("Reached the token validation point");
                 String username = String.valueOf(claims.get("username"));
                 String authorities = (String) claims.get("roles");
                 Authentication auth = new UsernamePasswordAuthenticationToken(username, null,
