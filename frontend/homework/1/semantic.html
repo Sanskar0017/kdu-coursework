@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Example</title>
+    <style>
+        body, html {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            width: 60%;
+        }
+
+        .header {
+            background-color: lightblue;
+            flex: 1;
+        }
+
+        .aside {
+            background-color: lightyellow;
+            flex: 1;
+            margin-top: auto;
+        }
+
+        .content {
+            background-color: lightcoral;
+            flex: 2;
+        }
+
+        .footer {
+            background-color: lightgreen;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header">
+            <h1>Header</h1>
+        </div>
+        <div class="box content">
+            <div class="article">
+                Article content goes here...
+            </div>
+            <div class="navigation">
+                Navigation links...
+            </div>
+            <div class="section">
+                Section content goes here...
+            </div>
+            <div class="main">
+                Main content goes here...
+            </div>
+        </div>
+        <div class="box aside">
+            Aside content goes here...
+        </div>
+        <div class="box footer">
+            &copy; Copyright 2024
+        </div>
+    </div>
+</body>
+</html>
