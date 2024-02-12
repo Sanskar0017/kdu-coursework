@@ -1,0 +1,11 @@
+{
+    "hostname": "lenovo-ThinkPad-E14",
+    "operatingSystem": "Linux",
+    "architecture": "x64",
+    "osRelease": "6.5.0-14-generic",
+    "upTime": 3164,
+    "cpuCores": 8,
+    "totalMemory": 15791,
+    "freeMemory": 8613,
+    "cwd": "/home/lenovo/Desktop/FrontEnd/NodeJS"
+}
