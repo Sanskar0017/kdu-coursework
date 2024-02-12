@@ -15,7 +15,7 @@ const server = http.createServer((req, res) => {
             cpuCores: os.cpus().length,
             totalMemoryMB: Math.floor(os.totalmem() / 1024 / 1024),
             freeMemoryMB: Math.floor(os.freemem() / 1024 / 1024),
-            // cwd: process.cwd() // Optional if needed
+             cwd: process.cwd()
         };
 
         res.setHeader('Content-Type', 'application/json');
