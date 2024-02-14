@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector & Box Model Demo</title>
+    <style>
+        #special-heading {
+            color: red;
+            font-weight: bold;
+        }
+        .important {
+            background-color: yellow;
+            border: 1px solid blue;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h2::first-letter {
+            font-size: 2em;
+            color: green;
+        }
+
+        header h1 {
+            text-align: center;
+        }
+        .container > div {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        h2 + p {
+            font-style: italic;
+        }
+        span ~ strong {
+            text-transform: uppercase;
+        }
+
+        /* Box Model */
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 5px solid black;
+            padding: 20px;
+            margin: 10px auto;
+        }
+        
+        /* Border-box vs. Content-box */
+        #content-box {
+            box-sizing: content-box;
+            padding: 20px;
+            border: 5px solid red;
+        }
+        #border-box {
+            box-sizing: border-box;
+            padding: 100px;
+            border: 5px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="special-heading">This is a Special Heading - ID selector</h1>
+    </header>
+
+    <section class="container">
+        <div class="important">
+            <h2><span>Important</span> Information</h2>
+            <p>This paragraph contains crucial details.</p>
+        </div>
+        <div>
+            <h2>Clickable Link <a href="#">here</a></h2>
+            <p>This text has its first letter enlarged and colored green.</p>
+        </div>
+    </section>
+
+    <p>Here is a normal paragraph.</p>
+    <strong>This text is next to a span and will become uppercase.</strong>
+
+    <h2>Box Model Demonstration</h2>
+    <div class="box">This box has padding, border, and margin.</div>
+    <div id="content-box">This box uses content-box for sizing (border adds to width/height).</div>
+    <div id="border-box">This box uses border-box for sizing (border doesn't affect width/height).</div>
+
+</body>
+</html>
