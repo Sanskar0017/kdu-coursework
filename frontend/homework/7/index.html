@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chat app using websockets</h1>
+
+    <input type="text" id="msgInput" placeholder="Enter your message" />
+    <button id="sendMessage">Send</button>
+
+    <div id="messages"></div>
+
+    <script
+      src="https://cdn.socket.io/4.7.4/socket.io.min.js"
+      integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const messageInput = document.getElementById("msgInput");
+      const messageOutput = document.getElementById("messages");
+      const socket = io("http://localhost:3000");
+      function addMessage(from, message) {
+        const element = document.createElement("p");
+        element.innerHTML = from + ":" + message;
+        messageOutput.appendChild(element);
+      }
+      const btn = document.getElementById("sendMessage");
+      btn.addEventListener("click", () => {
+        const messag = messageInput.value;
+        console.log(messag);
+        
+        // sent to particular message ove websockets
+        socket.emit("message", messag);
+        addMessage("Sanskar", messag);
+      });
+
+      socket.on("newMessage", (messag) => {
+        addMessage("User", messag);
+      });
+    </script>
+  </body>
+</html>
