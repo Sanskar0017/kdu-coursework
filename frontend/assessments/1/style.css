@@ -1,0 +1,132 @@
+body {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 200px;
+}
+.header-container #website-header {
+  width: 100%;
+  height: 50%;
+  background-color: #eb825a;
+  font-size: 2rem;
+  padding-left: 150px;
+  color: white;
+  padding-top: 20px;
+}
+.header-container #website-navbar {
+  width: 100%;
+  height: 50%;
+  background-color: #000;
+}
+.header-container #website-navbar #nav-bar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 140px;
+}
+.header-container #website-navbar #nav-bar-list .menu-opt {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 10px 10px;
+}
+
+#main-content {
+  width: 100%;
+  height: 800px;
+  background-color: black;
+  background-image: url("./imgassig.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#main-content .content-contain-one {
+  margin-left: 500px;
+  height: 50%;
+  width: 100%;
+}
+#main-content .content-contain-one #lorem-content {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  margin: 150px 450px;
+  height: 100px;
+  width: 850px;
+}
+#main-content .content-container-two {
+  background-color: white;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#main-content .content-container-two #left-desc {
+  position: relative;
+  left: 120px;
+}
+#main-content .content-container-two .description {
+  width: 40%;
+  height: 100%;
+}
+#main-content .content-container-two .description #welcome {
+  color: #000;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+#main-content .content-container-two #desc-right-box {
+  background-color: #000;
+  width: 65%;
+  height: 80%;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: white;
+  padding: 20px 20px;
+  font-size: 1.35rem;
+}
+
+#footer-content {
+  background-color: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1366px) and (max-height: 768px) and (min-width: 786px) and (min-height: 1024) {
+  .header-container {
+    position: relative;
+    right: 220px;
+    bottom: 40px;
+    margin-right: 300px;
+    transform: scale(0.8, 0.8);
+  }
+  .header-container #website-header {
+    width: 1366px;
+  }
+  .header-container #webite-navbar {
+    width: 1366px;
+  }
+  #main-content {
+    transform: scale(0.8, 0.8);
+    position: relative;
+    right: 145px;
+    bottom: 140px;
+  }
+}
+@media only screen and (max-width: 786px) and (max-height: 1024px) {
+  body {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
