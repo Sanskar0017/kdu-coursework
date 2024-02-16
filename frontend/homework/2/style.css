@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  background-color: white;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  margin: 0px auto;
+  margin-top: 100px;
+  width: 1000px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px;
+  color: gray;
+}
+.main .heading-first #top-heading {
+  font-size: 100px;
+  color: #4e4f52;
+}
+.main .heading-first #content-heading {
+  font-size: 40px;
+}
+.main .second-block {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.main .second-block .second-first {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.main .second-block .second-first img {
+  width: 90px;
+  height: 80px;
+}
+.main .second-block .second-first .right-container {
+  font-size: 50px;
+}
+.main .second-block .second-first span {
+  color: #4e4f52;
+  font-size: 50px;
+}
+.main .second-block .second-first span span {
+  color: grey;
+  font-weight: lighter;
+  font-size: 35px;
+}
+.main .second-block .current {
+  width: 100%;
+  height: 20%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 90px;
+  border: 2px solid black;
+  flex-wrap: wrap;
+}
+.main .second-block .current #num {
+  border: 2px solid black;
+}
+.main .second-block .detail {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main .second-block .detail #lists {
+  list-style: none;
+  padding: 20px;
+  font-size: 30px;
+}
+.main .third {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+.main .third .predict-box {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.main .third .predict-box .name {
+  font-weight: bolder;
+  color: #4e4f52;
+}
+.main .third .predict-box span {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

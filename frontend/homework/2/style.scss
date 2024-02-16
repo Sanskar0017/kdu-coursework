@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-color: white;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin: 0px auto;
+    margin-top: 100px;
+    width: 1000px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px;
+    color: gray;
+
+    .heading-first {
+        #top-heading {
+            font-size: 100px;
+            color: #4e4f52;
+        }
+
+        #content-heading {
+            font-size: 40px;
+        }
+    }
+
+    .second-block {
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+
+        .second-first {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            img {
+                width: 90px;
+                height: 80px;
+            }
+
+            .right-container {
+                font-size: 50px;
+            }
+
+            span {
+                color: #4e4f52;
+                font-size: 50px;
+
+                span {
+                    color: grey;
+                    font-weight: lighter;
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .current {
+            width: 100%;
+            height: 20%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            font-size: 90px;
+            border: 2px solid black;
+            flex-wrap: wrap;
+
+            #num {
+                border: 2px solid black;
+            }
+        }
+
+        .detail {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+
+            #lists {
+                list-style: none;
+                padding: 20px;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .third {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+
+        .predict-box {
+            display: inline-block;
+            align-items: center;
+            width: 100%;
+            margin: 0px auto;
+            margin-left: 20px;
+            font-size: 20px;
+
+            .name {
+                font-weight: bolder;
+                color: #4e4f52;
+            }
+
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}
