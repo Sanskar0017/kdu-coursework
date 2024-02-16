@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.header-container {
+  margin: 2px 2px;
+  width: 99%;
+  height: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  background-color: #1871c2;
+  font-size: 2rem;
+}
+.header-container #dashboard-name {
+  padding-left: 10px;
+}
+
+#main-container {
+  width: 99%;
+  border: 2px solid #000;
+  height: 780px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#main-container #stock-detail {
+  width: 75%;
+  margin: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#main-container #stock-detail #stock-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: inherit;
+  position: relative;
+  margin-top: 10px;
+  right: 150px;
+  font-size: 1.5rem;
+}
+#main-container #stock-detail #stock-description .stock-layout {
+  border: 1px solid #000;
+  height: 60px;
+  margin: 10px 10px;
+  padding: 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#main-container #stock-detail #stock-description #stock-name {
+  width: 35%;
+  position: relative;
+  left: 10px;
+}
+#main-container #stock-detail #stock-description #stock-price {
+  width: 50%;
+}
+#main-container #stock-detail #stock-description #stock-price #stock-price-def {
+  position: relative;
+  left: 10px;
+}
+#main-container #stock-detail #stock-description #stock-qty {
+  width: 25%;
+}
+#main-container #stock-detail #stock-description #stock-qty #stock-qty-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  position: relative;
+  left: 25px;
+}
+#main-container #stock-detail #stock-description #stock-buy-sell {
+  width: 35%;
+  outline: none;
+  border: none;
+}
+#main-container #stock-detail #stock-description #stock-buy-sell #stock-buy-button {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  outline: none;
+  border: none;
+  background-color: green;
+  color: white;
+}
+#main-container #stock-detail #stock-description #stock-buy-sell #stock-sell-button {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  outline: none;
+  border: none;
+  background-color: red;
+  color: white;
+}
+#main-container #stock-detail #stock-chart {
+  position: relative;
+  right: 50px;
+  width: 90%;
+  height: 500px;
+  border: 0.1px solid #000;
+  margin-top: 50px;
+  background-image: linear-gradient(to bottom, #aaa 1px, transparent 1px), linear-gradient(to right, #aaa 1px, transparent 1px), radial-gradient(1px 1px at center, #aaa 1px, transparent 2px), radial-gradient(1px 1px at center, #aaa 1px, transparent 2px);
+  background-size: 16.6666666667% 100%, 16.6666666667% 100%, 25% 16.6666666667%, 25% 16.6666666667%;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+#main-container #stock-detail #history {
+  width: 25%;
+  margin: 15px 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#main-container #stock-detail #history #title-name {
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */

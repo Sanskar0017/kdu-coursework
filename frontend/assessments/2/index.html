@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <p id="dashboard-name">KDU Stock Market Dashboard</p>
+      </div>
+    </header>
+
+    <main id="main-container">
+      <section id="stock-detail">
+        <div id="stock-description">
+          <div class="stock-layout" id="stock-name">
+            <p id="stock-name-dis">Zomato</p>
+          </div>
+          <div class="stock-layout" id="stock-price">
+            <p id="stock-price-def">Price</p>
+            <input
+              id="stock-price-input"
+              type="text"
+              placeholder="Price"
+              disabled
+            />
+          </div>
+          <div class="stock-layout" id="stock-qty">
+            <input id="stock-qty-input" type="text" placeholder="Enter Qty" />
+          </div>
+          <div class="stock-layout" id="stock-buy-sell">
+            <button id="stock-buy-button" type="button">Buy</button>
+            <button id="stock-sell-button" type="button">Sell</button>
+          </div>
+        </div>
+        <div id="stock-chart"></div>
+      </section>
+      <section id="history">
+        <p id="title-name">History</p>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
