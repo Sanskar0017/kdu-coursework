@@ -64,7 +64,6 @@ main {
         color: $FONTCOLOR;
         background-color: $BUTTONCOLOR;
         font-size: 17px;
-        // display: none;
       }
 
       #post-button-dk {
@@ -326,7 +325,6 @@ main {
       color: $FONTCOLOR;
       width: 100%;
       height: 25px;
-      fill: $FONTCOLOR;
       margin-top: 5px;
       fill: grey;
 
@@ -460,7 +458,6 @@ main {
         position: relative;
         right: 70px;
         fill: $FONTCOLOR;
-        width: 40px;
         height: 40px;
         border-radius: 20px;
       }
@@ -517,7 +514,6 @@ main {
     transition: all 1s ease-in-out;
     position: relative;
     bottom: 100px;
-    // left: 10px;
     padding-left: 5px;
     z-index: 99999;
     width: 280px;
@@ -562,7 +558,6 @@ main {
       .nitesh-text {
         width: 100%;
         height: 100px;
-        // border: 2px solid green;
         margin-left: 8px;
         margin-top: 10px;
 
@@ -639,8 +634,6 @@ main {
     width: inherit;
     border: 2px solid pink;
     color: $FONTCOLOR;
-    width: 30px;
-    height: 30px;
   }
 }
 
@@ -715,12 +708,6 @@ main {
     }
 
     #drafts-mb {
-      position: relative;
-      bottom: 10px;
-      left: 50px;
-    }
-
-    #drafts-mb {
       color: $BUTTONCOLOR;
       font-size: 1.3rem;
       position: relative;
@@ -746,7 +733,6 @@ main {
     margin-bottom: 10px;
     position: relative;
     bottom: 20px;
-    position: relative;
     top: 0;
     right: 45px;
 
@@ -780,7 +766,6 @@ main {
       #text-mb {
         color: $FONTCOLOR;
         width: 150px;
-        color: $BUTTONCOLOR;
         margin-left: 30px;
         position: relative;
         bottom: 40px;
@@ -844,28 +829,24 @@ main {
   .active-users {
     width: 50%;
     height: 100%;
-
     color: white;
-    // font-size: 25px;
 
     .display-all-active-users {
-      border: 2px solid green;
       height: 90%;
       width: 98%;
       padding: 5px 5px;
       display: flex;
       flex-direction: column;
+      margin: 40px 0px;
     }
 
     #message-header {
-      // border: 0.1px solid grey;
       position: absolute;
       top: 0;
       margin: 10px;
-
     }
 
-    #send-msg-btn{
+    #send-msg-btn {
       color: $FONTCOLOR;
     }
   }
@@ -878,24 +859,15 @@ main {
     font-size: 25px;
     display: flex;
     flex-direction: column;
-    // justify-content: space-around;
 
     #chat-box-current-user-name {
-      // width: 100%;
-      // height: 10%;
-      // font-size: 1rem;
-      // border: 2px solid red;
       position: absolute;
       top: 0;
-      // margin: 6px 5px;
       padding: 0px 10px;
       font-size: 1.3rem;
-      // border: 2px solid red;
       width: 39.5vw;
       height: 4vh;
       border-bottom: 0.1px solid gray;
-
-      
     }
 
     .chat-messages {
@@ -903,32 +875,19 @@ main {
       width: 100%;
       height: 92vh;
 
-      // border: 2px solid red;
       display: flex;
       flex-direction: column-reverse;
       align-items: end;
     }
 
     .chat-input-box {
-      // border: 0.3px solid grey;
-      // border-radius: 30px;
-      // // margin: 20px 0px;
-      // width: 100%;
-      // height: 7%;
-      // align-self: flex-end;
       display: flex;
       align-items: center;
       justify-content: center;
       color: $FONTCOLOR;
 
-
       #messageInput {
-        // width: 25vw;
-        // height: 6vh;
-        // font-size: 1.2rem;
-        // // background-color: gray;
-        // color: #000;
-        // padding: 0px 10px;
+        padding: 0px 20px;
         border-radius: 100px;
         height: 4vh;
         width: 35vw;
@@ -940,16 +899,16 @@ main {
         color: $FONTCOLOR;
       }
 
-      #messageInput::placeholder{
+      #messageInput::placeholder {
         padding: 5px 10px;
       }
 
-      #send-msg-btn{
+      #send-msg-btn {
         background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
       }
     }
   }
@@ -985,8 +944,8 @@ main {
       position: relative;
     }
 
-    #username,
-    #password {
+    #login_username,
+    #login_password {
       width: 40%;
       margin: 10px 10px;
       padding: 15px 15px;
@@ -996,7 +955,7 @@ main {
       color: $FONTCOLOR;
     }
 
-    #username::placeholder #password::placeholder {
+    #login_username::placeholder #login_password::placeholder {
       font-size: 1rem;
       color: $FONTCOLOR;
     }
