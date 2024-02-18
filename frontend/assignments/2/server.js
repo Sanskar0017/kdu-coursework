@@ -19,9 +19,11 @@ app.use(express.json());
 
 const activeUsers = new Set();
 const userObj = new User();
+let currentUser = "";
 
 app.post("/api/user/login", (req, res) => {
   const { username, password } = req.body;
+  currentUser = username;
   console.log("api/user/login");
 
   const user = userObj.verifyUser(username, password);
@@ -29,12 +31,17 @@ app.post("/api/user/login", (req, res) => {
   console.log(user);
   if (user.user_name == username) {
     console.log("fetching vaidation");
-    activeUsers.add(user.id);
+    activeUsers.add(username);
     res.json({ message: "Login successful", user });
     console.log("response successful");
   } else {
     res.status(401).json({ error: "Invalid username or password" });
   }
+});
+
+app.get("/api/active-users", (req, res) => {
+  const activeUsersArray = Array.from(activeUsers);
+  res.json(activeUsersArray);
 });
 
 io.on("connection", (socket) => {
@@ -49,17 +56,13 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("Client disconnected");
     activeUsers.delete(socket.username);
-    io.emit(
-      "activeUsers",
-      Array.from(activeUsers).map((userId) => {
-        return userObj.getUserById(userId).user_name;
-      })
-    );
+
+    io.emit("activeUsers", Array.from(activeUsers));
   });
 
-  socket.on("chatMessage", (message) => {
+  socket.on("chatMessage", (currentUser, message) => {
     console.log("Input message on server side is:", message);
-    io.emit("chatMessage", message);
+    io.emit("chatMessage", currentUser, message);
   });
 });
 
