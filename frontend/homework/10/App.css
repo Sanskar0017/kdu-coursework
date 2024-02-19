@@ -1,0 +1,16 @@
+.to-list {
+  background-color: #ffe68c;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 20px;
+}
+.to-list #title-header {
+  height: 20vh;
+  padding: 10px 70px;
+}
+.to-list #skill-hobby-description {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 20px;
+} /*# sourceMappingURL=App.css.map */
