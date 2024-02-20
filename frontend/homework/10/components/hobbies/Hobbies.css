@@ -4,18 +4,16 @@
   margin: 10px 10px;
   background-color: #a5f0af;
   border: 0.1px solid red;
-
-  #hobbies-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: orange;
-    font-size: 30px;
-  }
-
-  #listHobbies {
-    list-style-type: none;
-    color: green;
-    font-size: 30px;
-  }
 }
+.hobby-section #hobbies-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: orange;
+  font-size: 40px;
+}
+.hobby-section #listHobbies {
+  list-style-type: none;
+  color: green;
+  font-size: 30px;
+}/*# sourceMappingURL=Hobbies.css.map */
