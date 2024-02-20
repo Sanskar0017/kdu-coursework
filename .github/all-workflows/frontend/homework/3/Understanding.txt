@@ -1,0 +1,25 @@
+toFixed -> converts the number to string, rounds the string to specified number of decimals
+
+Map -> key-value pair for replacement
+const anyName = {
+    key : pair,     (ensure data type)
+    ....
+    ...
+    ..
+}
+
+reduce: function against an  accumulator and each  element in the  array from left to right.
+        executes callback function for each elemnent in array and returns a single value
+
+sort: sort elements of array
+filter: creates a new array for all the test passed inside the specified function (iterates over all the elements)
+
+typeof -> Used for validation of data type
+throw new <exception_name> -> throwing exception anyName
+
+
+
+JSON.stringify() -> converts a JS object or value to a JSON string
+
+
+
