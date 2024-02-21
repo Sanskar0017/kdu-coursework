@@ -1,0 +1,54 @@
+@import 'variables';
+
+.quote {
+  background-color: $BLUE_COLOR;
+  border-radius: 20px;
+  color: $OFF_WHITE;
+  padding: 20px 100px;
+  margin: 20px 20px;
+  height: 35vh;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+
+  .static-content {
+    height: 85%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #quote-content {
+    font-size: 2rem;
+  }
+
+  #quote-author {
+    font-size: 1.5rem;
+    margin: 10px 10px;
+    text-align: right;
+  }
+
+  #quote-date {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    align-self: flex-end;
+    text-align: right;
+    color: $OFF_WHITE;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: $PINK_COLOR;
+    color: $BLACK_COLOR;
+    padding: 5px 10px;
+    width: 7vw;
+    border-radius: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .tag:hover {
+    background-color: $PINK_COLOR;
+  }
+}
