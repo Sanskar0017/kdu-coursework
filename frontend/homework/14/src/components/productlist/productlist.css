@@ -1,0 +1,82 @@
+.productlisting {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.productlisting .product-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vh;
+  background-color: #29296e;
+}
+.productlisting .product-header .product-filter #filter-product {
+  font-size: 20px;
+}
+.productlisting .product-header .product-sort #price-btn {
+  font-size: 20px;
+}
+.productlisting .product-listpage-header #search-input {
+  font-size: 20px;
+}
+.productlisting .product-listpage-header #search-btn {
+  width: 2vw;
+  height: 3vh;
+  position: relative;
+  bottom: 2px;
+}
+.productlisting #main-page-title {
+  align-self: center;
+  font-size: 50px;
+}
+.productlisting #main-page-title #marketplace {
+  color: #29296e;
+}
+.productlisting #listing-all-products {
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+}
+.productlisting #listing-all-products #product-entity {
+  width: 20%;
+  margin: 20px 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  background-color: white;
+}
+.productlisting #listing-all-products #product-entity .image-container {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.productlisting #listing-all-products #product-entity .image-container #productItem {
+  background-color: white;
+  width: 50%;
+  align-self: center;
+}
+.productlisting #listing-all-products #product-entity .entity-descrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  color: black;
+}
+.productlisting #listing-all-products #product-entity .entity-descrp #entity-title {
+  width: 70%;
+  text-decoration: none;
+}
+.productlisting #listing-all-products #product-entity .entity-descrp #entity-price {
+  color: #29296e;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 5px;
+  text-decoration: none;
+}/*# sourceMappingURL=productlist.css.map */
