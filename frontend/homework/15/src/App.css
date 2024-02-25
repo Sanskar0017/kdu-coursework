@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .inputfield {
+  border: 2px solid red;
+  height: 120vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+.container .inputfield input {
+  margin: 10px 10px;
+}/*# sourceMappingURL=App.css.map */
