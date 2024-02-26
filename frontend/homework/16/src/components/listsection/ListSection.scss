@@ -1,0 +1,72 @@
+@import "../utils/variable.css";
+
+#section {
+  padding: 20px;
+  min-height: 400px;
+  height: fit-content;
+  border: 0.001px solid $LIGHT_GREY_COLOR;
+  width: 70%;
+  margin: 15px 200px;
+
+  #sub-heading {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  #input-field {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  #submit-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 0px 5px;
+    background-color: $GREY_COLOR;
+    color: $WHITE_COLOR;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $BLUE_COLOR;
+    }
+  }
+
+  #list-container {
+    list-style-type: none;
+    padding: 0;
+
+    #list-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 0.001px solid $LIGHT_GREY_COLOR;
+      min-height: 60px;
+
+      span {
+        font-size: 16px;
+        margin: 2px 10px;
+      }
+
+      #delete-btn {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin: 2px 10px;
+        background-color: $LIGHT_RED_COLOR;
+        color: $WHITE_COLOR;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $RED_COLOR;
+        }
+      }
+    }
+  }
+}
