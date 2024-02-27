@@ -38,6 +38,20 @@ describe("Render the list section", () => {
     ).not.toBeInTheDocument();
   });
 
+  test("adding items to the list", () => {
+    const inputField = screen.getByTestId("input-field");
+    const btnField = screen.getByTestId("submit-btn");
+
+    fireEvent.change(inputField, {
+      target: { value: "Sanskar adds an item into the list" },
+    });
+    fireEvent.click(btnField);
+
+    const addedItem = screen.getByText("Sanskar adds an item into the list");
+    expect(addedItem).toBeInTheDocument();
+
+  });
+
   test("input box changing with user", () => {
     const inputField = screen.getByTestId("input-field");
     const data = "Sanskar entering value into input";
