@@ -1,0 +1,973 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+$BUTTONCOLOR: #1d9bf0;
+$FONTCOLOR: white;
+$GREYCOLOR: grey;
+
+body {
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.x-main-lgo {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+#top-most-logo {
+  width: 30px;
+  height: 30px;
+  fill: $FONTCOLOR;
+}
+
+.main-logo-desktop-mobile {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.main-navigation-bar {
+  width: 316px;
+  height: 965px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+
+  .navigation-bar-top-items {
+    padding-left: 70px;
+
+    .nav-name {
+      padding-left: 20px;
+    }
+
+    .nav-bar {
+      display: flex;
+      flex-direction: row;
+      color: $FONTCOLOR;
+      font-size: 18px;
+
+      .img-logo {
+        width: 30px;
+        height: 30px;
+        fill: $FONTCOLOR;
+        margin-top: 13px;
+      }
+
+      #post-button {
+        width: 225px;
+        height: 52px;
+        border-radius: 30px;
+        color: $FONTCOLOR;
+        background-color: $BUTTONCOLOR;
+        font-size: 17px;
+      }
+
+      #post-button-dk {
+        width: 225px;
+        height: 52px;
+        border-radius: 30px;
+        color: $FONTCOLOR;
+        background-color: $BUTTONCOLOR;
+        font-size: 17px;
+      }
+    }
+  }
+
+  #profile-nav {
+    margin-top: 130px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    position: relative;
+    bottom: 30px;
+
+    .img-logo {
+      margin-top: 30px;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    #user-id {
+      margin-bottom: 200px;
+      color: grey;
+      position: relative;
+      bottom: 3px;
+    }
+
+    #options {
+      margin-right: 15px;
+      position: relative;
+      left: 50px;
+      width: 30px;
+    }
+
+    #menu-logo {
+      margin-left: 40px;
+    }
+
+    .user-identity {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  fill: $FONTCOLOR;
+  color: $FONTCOLOR;
+  position: relative;
+  top: 5px;
+}
+
+#profile-logo {
+  width: 10px;
+  height: 10px;
+}
+
+.more-options {
+  fill: $FONTCOLOR;
+  color: $FONTCOLOR;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.tweet-box-section {
+  margin-left: 20px;
+  width: 700px;
+  border: 0.1rem solid grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-box {
+  display: flex;
+  flex-direction: row;
+  border: 0.1rem solid grey;
+  width: 700px;
+  height: 156px;
+  background-color: black;
+  margin-right: 300px;
+}
+
+#textarea-container {
+  width: 527px;
+  height: 77px;
+  margin-left: 18px;
+}
+
+#happening-container {
+  outline: none;
+  border: none;
+  margin-top: 17px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+  background-color: black;
+  width: 1000px;
+  color: $GREYCOLOR;
+}
+
+#img-N-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 18px;
+  margin-top: 16px;
+}
+
+#bottom-icons {
+  display: flex;
+  flex-direction: row;
+  width: 527px;
+  height: 50px;
+  margin-left: 13px;
+  margin-top: 20px;
+  fill: $BUTTONCOLOR;
+}
+
+.bottom-icon {
+  width: 20px;
+  height: 20px;
+  padding: 10px 10px;
+}
+
+#post-button {
+  margin-left: 200px;
+  margin-top: 5px;
+  width: 67px;
+  height: 37px;
+  border-radius: 20px;
+  color: $FONTCOLOR;
+  background-color: $BUTTONCOLOR;
+  position: relative;
+  left: 90px;
+}
+
+#tweet-box-second {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid green;
+  width: 700px;
+  height: 156px;
+  background-color: black;
+  margin-right: 300px;
+
+  .post-user {
+    color: $FONTCOLOR;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    margin-left: 8px;
+
+    #post-user-name {
+      font-size: 1.5rem;
+      padding: 5px 5px;
+    }
+
+    #post-user-id {
+      padding: 5px 5px;
+      color: $GREYCOLOR;
+      margin-top: 5px;
+    }
+
+    #post-three-dots {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+      position: relative;
+      left: 250px;
+      fill: $GREYCOLOR;
+    }
+  }
+}
+
+#tweet-box-second-p {
+  display: flex;
+  flex-direction: row;
+  border: 0.1rem solid grey;
+  width: 700px;
+  height: 156px;
+  color: white;
+
+  .box-div-one {
+    width: 10%;
+    height: 100%;
+  }
+
+  .box-div-two {
+    width: 90%;
+    height: 100%;
+
+    #box-div-f {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 100%;
+      height: 33%;
+
+      .post-user-f {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+
+        .post-user-divide {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          margin-right: 100px;
+        }
+      }
+
+      #post-user-name {
+        font-size: 1.5rem;
+      }
+
+      #post-user-id {
+        margin-top: 5px;
+        color: grey;
+      }
+
+      #post-three-dots {
+        position: relative;
+        left: 240px;
+        fill: $FONTCOLOR;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    #box-div-s {
+      display: flex;
+      flex: row;
+      justify-content: flex-start;
+      width: 100%;
+      height: 33%;
+
+      p {
+        font-size: 1.3rem;
+        position: relative;
+        bottom: 20px;
+      }
+    }
+
+    #box-div-t {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: $FONTCOLOR;
+      width: 100%;
+      height: 25px;
+      margin-top: 5px;
+      fill: grey;
+
+      #last-two {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        right: 20px;
+      }
+    }
+  }
+}
+
+#developer-life {
+  color: $BUTTONCOLOR;
+}
+
+#deftn-coffehand {
+  color: $FONTCOLOR;
+}
+
+@media screen and (max-width: 1079px) and (max-height: 726px) {
+  .desktop-view {
+    transform: scale(0.8);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-view {
+    display: none;
+  }
+
+  .tweet-box-section {
+    display: none;
+  }
+
+  .nav-section {
+    width: 414px;
+    height: 110px;
+  }
+
+  .N-button-top {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 20px;
+    background-color: #000;
+  }
+
+  .top-lane {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: inherit;
+
+    .dev-post {
+      width: 98%;
+      height: 150px;
+      border: 0.5px solid $GREYCOLOR;
+      position: relative;
+      bottom: 10px;
+      display: flex;
+      flex-direction: row;
+      color: $FONTCOLOR;
+
+      .icons-mobf {
+        width: 400px;
+        height: 50px;
+        position: relative;
+        top: 90px;
+        right: 190px;
+        color: $FONTCOLOR;
+        fill: $GREYCOLOR;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .icons-edit {
+          width: 30px;
+          height: 30px;
+          padding: 20px;
+        }
+
+        #icon-edit-mb {
+          position: relative;
+          left: 30px;
+        }
+      }
+
+      #N-name {
+        color: $FONTCOLOR;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+
+      #svg-mb {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        left: 100px;
+        top: 10px;
+        fill: $GREYCOLOR;
+      }
+
+      #N-profile {
+        color: $GREYCOLOR;
+      }
+
+      #profile-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin: 10px 10px;
+      }
+    }
+
+    #icons {
+      height: 50%;
+      width: inherit;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 10px;
+
+      img {
+        width: 33%;
+        position: relative;
+        right: 70px;
+        fill: $FONTCOLOR;
+        height: 40px;
+        border-radius: 20px;
+      }
+
+      svg {
+        width: 33%;
+        fill: $FONTCOLOR;
+      }
+
+      #x-logo {
+        position: relative;
+        right: 25px;
+        width: 25px;
+        height: 25px;
+        top: 5px;
+      }
+
+      #setting-logo {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 40px;
+        top: 5px;
+      }
+    }
+
+    #follow {
+      height: 50%;
+      width: inherit;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .f-content {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      #foryou-mb {
+        border-bottom: 2px solid $BUTTONCOLOR;
+      }
+    }
+  }
+
+  .mob-menu {
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+    position: relative;
+    bottom: 100px;
+    padding-left: 5px;
+    z-index: 99999;
+    width: 280px;
+    background-color: #000;
+    height: 896px;
+
+    .menu-container-one {
+      width: 280px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: #000;
+
+      .N-plus-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .N-button-top-m {
+          width: 45px;
+          height: 45px;
+          border-radius: 30px;
+          margin-top: 10px;
+          position: relative;
+          right: 60px;
+          background-color: #000;
+        }
+
+        #plus-button-top {
+          fill: $GREYCOLOR;
+          border: 0.1rem solid grey;
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          margin-top: 15px;
+          position: relative;
+          left: 40px;
+        }
+      }
+
+      .nitesh-text {
+        width: 100%;
+        height: 100px;
+        margin-left: 8px;
+        margin-top: 10px;
+
+        .user-identity-m {
+          color: $FONTCOLOR;
+          font-size: 1.2rem;
+        }
+
+        #post-user-id {
+          padding-top: 2px;
+          color: $GREYCOLOR;
+          font-size: 1rem;
+        }
+      }
+
+      .following-followers {
+        display: flex;
+        flex-direction: row;
+
+        #following-m,
+        #followers-m {
+          color: $GREYCOLOR;
+          padding-left: 5px;
+          padding-right: 10px;
+          #one-m,
+          #zero-m {
+            color: $FONTCOLOR;
+          }
+        }
+      }
+    }
+    .menu-container-two {
+      border-bottom: 0.5px solid;
+      width: 280px;
+      height: 500px;
+      margin-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .m-items {
+        color: $FONTCOLOR;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+
+        #m-svg {
+          width: 20px;
+          height: 20px;
+          fill: $FONTCOLOR;
+          margin-top: 15px;
+        }
+
+        .m-text {
+          padding-left: 13px;
+          font-size: 1.3rem;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 671px;
+  width: inherit;
+  border: 2px solid red;
+
+  .menu-div {
+    height: 61px;
+    width: inherit;
+    border: 2px solid pink;
+    color: $FONTCOLOR;
+  }
+}
+
+.mob-display {
+  display: none;
+}
+
+.mob-post-icon {
+  #post-icon-mob {
+    width: 30px;
+    height: 30px;
+    border: 0.1px solid yellow;
+    border-radius: 50px;
+    background-color: #1d9bf0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 20px 20px;
+    fill: $FONTCOLOR;
+  }
+}
+
+#mob-tweet-post {
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-view {
+    display: none;
+  }
+
+  .tweet-mobile {
+    display: none;
+  }
+
+  .postbtn {
+    display: none;
+  }
+}
+
+.postbtn {
+  display: none;
+}
+
+.tweet-mobile {
+  width: 270px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin: 20px 60px;
+
+  #btns-top {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    #back-mb {
+      fill: $FONTCOLOR;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      right: 160px;
+    }
+
+    #drafts-mb {
+      color: $BUTTONCOLOR;
+      font-size: 1.3rem;
+      position: relative;
+      bottom: 20px;
+      padding-right: 5px;
+    }
+
+    #btn-post {
+      color: white;
+      background-color: $BUTTONCOLOR;
+      width: 60px;
+      height: 30px;
+      border-radius: 40px;
+      position: relative;
+      left: 60px;
+    }
+  }
+
+  .icons-mob {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 20px;
+    top: 0;
+    right: 45px;
+
+    .icon-m {
+      width: 20px;
+      height: 20px;
+      padding: 10px 10px;
+    }
+  }
+
+  #tweet-line-1 {
+    border-bottom: 0.5px solid grey;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 350px;
+    position: relative;
+
+    right: 50px;
+
+    #reply-mb {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      margin-top: 110px;
+      margin-left: 15px;
+      fill: $BUTTONCOLOR;
+      bottom: 10px;
+
+      #text-mb {
+        color: $FONTCOLOR;
+        width: 150px;
+        margin-left: 30px;
+        position: relative;
+        bottom: 40px;
+      }
+    }
+
+    #img-tweet-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      margin: 3px 10px;
+    }
+
+    #text-cont {
+      margin: 12px 5px;
+      border: none;
+      background: none;
+      color: transparent;
+      outline: none;
+      font-size: 1.2rem;
+      padding-left: 10px;
+    }
+
+    #reply-tweet-m {
+      color: $BUTTONCOLOR;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+
+      #every-reply {
+        color: red;
+      }
+    }
+
+    #bottom-tweet-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      .bottom-tweet-icon {
+        width: 10px;
+        height: 10px;
+        fill: $BUTTONCOLOR;
+      }
+    }
+  }
+}
+
+.chat-container {
+  width: 80%;
+  border: 0.3px solid gray;
+  display: none;
+  justify-content: flex-start;
+  height: 98vh;
+
+  .active-users .chat-box #message-header {
+    border: 0.1px solid $GREYCOLOR;
+  }
+
+  .active-users {
+    width: 50%;
+    height: 100%;
+    color: white;
+
+    .display-all-active-users {
+      height: 90%;
+      width: 98%;
+      padding: 5px 5px;
+      display: flex;
+      flex-direction: column;
+      margin: 40px 0px;
+    }
+
+    #message-header {
+      position: absolute;
+      top: 0;
+      margin: 10px;
+    }
+
+    #send-msg-btn {
+      color: $FONTCOLOR;
+    }
+  }
+
+  .chat-box {
+    width: 50%;
+    height: 100%;
+    border: 0.1px solid $GREYCOLOR;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+
+    #chat-box-current-user-name {
+      position: absolute;
+      top: 0;
+      padding: 0px 10px;
+      font-size: 1.3rem;
+      width: 39.5vw;
+      height: 4vh;
+      border-bottom: 0.1px solid gray;
+    }
+
+    .chat-messages {
+      border: 0.1px solid $GREYCOLOR;
+      width: 100%;
+      height: 92vh;
+
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: end;
+    }
+
+    .chat-input-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $FONTCOLOR;
+
+      #messageInput {
+        padding: 0px 20px;
+        border-radius: 100px;
+        height: 4vh;
+        width: 35vw;
+        outline: none;
+        border: none;
+        background-color: #191e23;
+        margin: 5px 0px;
+        font-size: 1rem;
+        color: $FONTCOLOR;
+      }
+
+      #messageInput::placeholder {
+        padding: 5px 10px;
+      }
+
+      #send-msg-btn {
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.login-credentials-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  #login-form {
+    width: 40%;
+    margin: 150px 0px 250px 100px;
+    color: $FONTCOLOR;
+    padding: 50px 0px 60px 140px;
+
+    .login-page-title {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 50px;
+    }
+
+    #login-to-title {
+      height: 20%;
+      font-size: 3rem;
+    }
+
+    #x-icon {
+      fill: $FONTCOLOR;
+      width: 15%;
+      height: 15%;
+      padding: 30px 0px 0px 0px;
+      position: relative;
+    }
+
+    #login_username,
+    #login_password {
+      width: 40%;
+      margin: 10px 10px;
+      padding: 15px 15px;
+      border: 2px solid #4b9beb;
+      border-radius: 10px;
+      background-color: #000;
+      color: $FONTCOLOR;
+    }
+
+    #login_username::placeholder #login_password::placeholder {
+      font-size: 1rem;
+      color: $FONTCOLOR;
+    }
+
+    #submit-btn {
+      width: 40%;
+      padding: 10px 10px;
+      margin: auto 30px;
+      background-color: #4b9beb;
+      color: white;
+      border-radius: 20px;
+      font-size: 1.5rem;
+    }
+  }
+}
