@@ -1,0 +1,15 @@
+.container {
+  width: 50vw;
+  height: 100vh;
+  margin: 50px 350px;
+}
+.container .new-quote-btn {
+  width: 10vw;
+  height: 7vh;
+  background-color: #ffe3ca;
+  color: #0c359e;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}/*# sourceMappingURL=App.css.map */
