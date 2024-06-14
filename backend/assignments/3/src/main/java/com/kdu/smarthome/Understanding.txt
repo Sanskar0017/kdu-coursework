@@ -1,0 +1,20 @@
+Entities:
+
+User:
+Attributes: user_id (primary key), username, password, name, first_name, last_name, email_id, created_date, modified_date, deleted_date
+House:
+Attributes: house_id (primary key), address, house_name, admin_user_id (foreign key references User.user_id), created_date, modified_date, deleted_date
+Room:
+Attributes: room_id (primary key), house_id (foreign key references House.house_id), room_name, created_date, modified_date, deleted_date
+Device:
+Attributes: device_id (primary key), kickston_id, username, password, manufacture_date_time, manufacture_factory_place, registered, house_id (foreign key references House.house_id), room_id (foreign key references Room.room_id), created_date, modified_date, deleted_date
+
+Relationships:
+
+One user can create many houses (One-to-Many)
+One house can have many users (Many-to-Many) through an intermediate table mapping user_id and house_id
+One house can have one admin user (One-to-One)
+One house can have many rooms (One-to-Many)
+One room can belong to one house (Many-to-One)
+One device can be in one house (Many-to-One)
+One device can be in one room (Many-to-One)
